@@ -1,0 +1,22 @@
+﻿body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.475;
+    color: #949494;
+    background-color: #fff;
+    font-family: Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,”Hiragino Sans GB”,Simsun,sans-self;
+}
+
+.page-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 280px;
+    width: 100%;
+}
