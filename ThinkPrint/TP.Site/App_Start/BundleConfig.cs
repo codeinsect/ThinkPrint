@@ -32,6 +32,7 @@ namespace TP.Site
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/site.css"));
 
             // 将 EnableOptimizations 设为 false 以进行调试。有关详细信息，

@@ -28,65 +28,49 @@
             </div>
             <div class="row">
                 <div class="panel-bg">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <span class="panel-title">
-                                <i class="fa fa-toggle-off fa-fw"></i>登录
-                            </span>
-                        </div>
-                        <div class="panel-body">
-                            <div class="login-avatar"> <img src="~/img/login.png" width="150" height="112" alt="avatar"> </div>
-                            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal" }))
-                            {
+                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", @id = "loginPanel" }))
+                    {
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <span class="panel-title">
+                                    <i class="fa fa-toggle-off fa-fw"></i>登录
+                                </span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="login-avatar"> <img src="~/img/login.png" width="150" height="112" alt="avatar"> </div>
+
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger", id = "validation-summary-errors" })
                                 <div class="form-group">
-                                    @*<label class="col-sm-2 control-label" for="txtUserName">名 称</label>
-                                        <div class="col-sm-8">
-                                            @Html.TextBoxFor(m => m.UserName, new { id = "txtUserName", @class = "form-control", autofocus = "", placeholder = "用户名称" })
-
-                                        </div>
-                                        <div class="col-lg-offset-2 col-sm-8">
-                                            @Html.ValidationMessageFor(m => m.UserName)
-                                        </div>*@
                                     <div class="col-lg-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                            @Html.TextBoxFor(m => m.UserName, new { id = "txtUserName", @class = "form-control", autofocus = "", placeholder = "用户名称" })
+                                            @Html.TextBoxFor(m => m.UserName, new { id = "UserName", @class = "form-control", autofocus = "", placeholder = "用户名称" })
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="form-group">
 
                                     <div class="col-lg-12">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                                            @Html.PasswordFor(m => m.Password, new { id = "txtPassword", @class = "form-control", placeholder = "登陆密码" })
+                                            @Html.PasswordFor(m => m.Password, new { id = "Password", @class = "form-control", placeholder = "登陆密码" })
                                         </div>
                                     </div>
-                                    @*<label class="col-sm-2 control-label" for="txtPassword">密 码</label>
-                                        <div class="col-sm-8">
-                                            @Html.PasswordFor(m => m.Password, new { id = "txtPassword", @class = "form-control", placeholder = "登陆密码" })
-
-                                        </div>
-                                        <div class="col-lg-offset-2 col-sm-8">
-                                            @Html.ValidationMessageFor(m => m.Password)
-                                        </div>*@
                                 </div>
-                             
-                            }
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-sm bg-purple pull-right" type="submit"><i class="fa fa-home fa-fw"></i>登 陆</button>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
-                        <div class="panel-footer">
-                            <button class="btn btn-sm bg-purple pull-right" type="submit"><i class="fa fa-home fa-fw"></i>登 陆</button>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
     </div>
     <div class="overlay-black"></div>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/backstretch")
     @Scripts.Render("~/bundles/login")
