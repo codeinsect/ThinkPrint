@@ -26,6 +26,13 @@ namespace TP.Site
             bundles.Add(new ScriptBundle("~/bundles/backstretch").Include(
                      "~/Scripts/jquery.backstretch.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/initScript").Include(
+                 "~/Scripts/jquery.metisMenu.js",
+                  "~/Scripts/json2.js",
+                 "~/JS/Shared/sharedScript.js",
+                 "~/JS/Shared/defaultDeleteScript.js"
+           ));
+
              bundles.Add(new ScriptBundle("~/bundles/login").Include(
                      "~/JS/login.js"));
 

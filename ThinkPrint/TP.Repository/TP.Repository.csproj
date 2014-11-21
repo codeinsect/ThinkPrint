@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="Base\BaseUnitOfWork.cs" />
+    <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="IEmployeeRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="IUserRoleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
