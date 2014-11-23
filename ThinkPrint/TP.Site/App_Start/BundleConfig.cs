@@ -26,8 +26,12 @@ namespace TP.Site
             bundles.Add(new ScriptBundle("~/bundles/backstretch").Include(
                      "~/Scripts/jquery.backstretch.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/slidebars").Include(
+                      "~/Scripts/jquery.metisMenu.js",
+                      "~/Scripts/jquery.scrollTo.js",
+                     "~/Scripts/slidebars.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/initScript").Include(
-                 "~/Scripts/jquery.metisMenu.js",
                   "~/Scripts/json2.js",
                  "~/JS/Shared/sharedScript.js",
                  "~/JS/Shared/defaultDeleteScript.js"
@@ -40,6 +44,7 @@ namespace TP.Site
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
+                      "~/Content/slidebars.css",
                       "~/Content/site.css"));
 
             // 将 EnableOptimizations 设为 false 以进行调试。有关详细信息，

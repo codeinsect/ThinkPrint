@@ -88,7 +88,7 @@ a.logo {
     .navbar-top-links li a {
         padding: 15px;
         min-height: 50px;
-            color: #a287d4;
+        color: #a287d4;
     }
 
 .navbar-top-links .dropdown-menu li {
@@ -143,6 +143,18 @@ a.logo {
         display: inline-block;
         font-size: 20px;
     }
+
+.sidebar-closed > #sidebar > ul {
+    display: none;
+}
+
+.sidebar-closed #main-content {
+    margin-left: 0px;
+}
+
+.sidebar-closed #sidebar {
+    margin-left: -210px;
+}
 
 /*sidebar navigation*/
 
@@ -347,19 +359,9 @@ ul.sidebar-menu li {
                 /*display: none !important;*/
             }
 
-    .mail-info, .mail-info:hover {
-        display: none !important;
-    }
+  
 
-    #sidebar ul > li > a .arrow, #sidebar > ul > li > a .arrow.open {
-        margin-right: 10px;
-        margin-top: 15px;
-    }
-
-    #sidebar ul > li.active > a .arrow, #sidebar ul > li > a:hover .arrow, #sidebar ul > li > a:focus .arrow,
-    #sidebar > ul > li.active > a .arrow.open, #sidebar > ul > li > a:hover .arrow.open, #sidebar > ul > li > a:focus .arrow.open {
-        margin-top: 15px;
-    }
+  
 
     #sidebar > ul > li > a, #sidebar > ul > li > ul.sub > li {
         width: 100%;
@@ -394,4 +396,11 @@ ul.sidebar-menu li {
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
         }
+
+    .arrow {
+        top: 8px;
+    }
+    ul.sidebar-menu li ul.sub li a {
+        padding: 0;
+    }
 }
