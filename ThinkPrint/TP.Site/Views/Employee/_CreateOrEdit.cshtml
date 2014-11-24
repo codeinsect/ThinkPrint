@@ -1,0 +1,13 @@
+﻿@model TP.Site.Models.Organization.EmployeeModel
+@Html.HiddenFor(u => u.IsEdit)
+<div class="form-group">
+    <label for="txtName" class="control-label col-lg-2">员工名称</label>
+    <div class="col-lg-6">
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "员工名称信息", id = "txtName" })
+    </div>
+    <div class="col-lg-4">
+        <p class="text-danger">
+            @Html.ValidationMessageFor(m => m.Name)
+        </p>
+    </div>
+</div>

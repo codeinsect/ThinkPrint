@@ -150,6 +150,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\NotifyType.cs" />
     <Compile Include="Helper\SysConstant.cs" />
     <Compile Include="Models\Account\AccountModels.cs" />
     <Compile Include="Models\Organization\EmployeeViewModels.cs" />
@@ -229,6 +230,10 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\_EmployeeList.cshtml" />
+    <Content Include="Views\Shared\_Notifications.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

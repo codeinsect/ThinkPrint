@@ -33,5 +33,46 @@ namespace TP.Site.Controllers
             model.NavigationTitle = NavigationTitle;
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+            var model = new EmployeeModel();
+            model.EntryDate = DateTime.Now.Date;
+            PrepareModel(model);
+            return View(model);
+        }
+
+        public ActionResult Edit(int id) 
+        {
+            ORG_Employee employee = _employeeService.GetEmployeeById(id);
+
+            EmployeeModel model = new EmployeeModel
+            {
+                Id = employee.EmployeeId,
+                Name = employee.Name,
+                JobNumber = employee.JobNumber,
+                CredentialsNum = employee.CredentialsNum,
+                Sex = employee.Sex,
+                Age = employee.Age,
+                MobilePhone = employee.MobilePhone,
+                Status = employee.Status,
+                EntryDate = employee.EntryDate,
+                IsEdit = true
+            };
+            PrepareModel(model);
+            return View(model);
+        }
+
+        [NonAction]
+        private void PrepareModel(EmployeeModel model)
+        {
+            model.NavigationTitle = NavigationTitle;
+            model.IsEdit = model.Id == 0 ? false : true;
+            if (!model.IsEdit)
+            {
+                model.Sex = true;
+            }
+            //PrepareDepartmnet(model);
+        }
     }
 }

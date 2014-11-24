@@ -89,7 +89,7 @@ namespace TP.Web.Framework.Mvc
         /// <param name="persistForTheNextRequest">A value indicating whether a message should be persisted for the next request</param>
         protected virtual void AddNotification(NotifyType type, string message, bool persistForTheNextRequest)
         {
-            string dataKey = string.Format("nsis.notifications.{0}", type);
+            string dataKey = string.Format("tp.notifications.{0}", type);
             if (persistForTheNextRequest)
             {
                 if (TempData[dataKey] == null)
@@ -106,7 +106,7 @@ namespace TP.Web.Framework.Mvc
 
         protected virtual void ActiveMenu(string activeId)
         {
-            string dataKey = "nsis.activeMenu";
+            string dataKey = "tp.activeMenu";
 
             if (System.Web.HttpContext.Current.Session[dataKey] == null)
             {
@@ -122,7 +122,7 @@ namespace TP.Web.Framework.Mvc
 
         protected virtual void ActiveNavigation(string activeId)
         {
-            string dataKey = "nsis.activeMenu";
+            string dataKey = "tp.activeMenu";
 
             if (ViewData[dataKey] == null)
             {
