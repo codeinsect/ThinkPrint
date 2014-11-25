@@ -45,7 +45,10 @@ namespace TP.Site
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
                       "~/Content/slidebars.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/style-responsive.css",
+                      "~/Content/bootstrap-reset.css"
+                      ));
 
             // 将 EnableOptimizations 设为 false 以进行调试。有关详细信息，
             // 请访问 http://go.microsoft.com/fwlink/?LinkId=301862

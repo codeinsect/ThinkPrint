@@ -15,6 +15,10 @@ namespace TP.EntityFramework.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(50);
 
+            this.Property(t => t.UniqueCode)
+                .IsRequired()
+                .HasMaxLength(50);
+
             this.Property(t => t.Address)
                 .IsRequired()
                 .HasMaxLength(225);
@@ -35,6 +39,7 @@ namespace TP.EntityFramework.Models.Mapping
             this.Property(t => t.StoreId).HasColumnName("StoreId");
             this.Property(t => t.CompanyId).HasColumnName("CompanyId");
             this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.UniqueCode).HasColumnName("UniqueCode");
             this.Property(t => t.Address).HasColumnName("Address");
             this.Property(t => t.Telephone).HasColumnName("Telephone");
             this.Property(t => t.ResponsiblePerson).HasColumnName("ResponsiblePerson");

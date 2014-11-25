@@ -8,7 +8,9 @@ namespace NSIS.Web.Models
     public class BaseViewModel
     {
         public virtual int Id { get; set; }
-        public virtual string NavigationTitle { get; set; }
+
+        public virtual string PageTitle { get; set; }
+        public virtual string PageSubTitle { get; set; }
         public bool IsEdit { get; set; }
     }
 }

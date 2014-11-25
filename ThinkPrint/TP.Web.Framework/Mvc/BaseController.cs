@@ -10,11 +10,6 @@ namespace TP.Web.Framework.Mvc
     public class BaseController : Controller
     {
 
-        public string PageIconMark { get; set; }
-
-        public string PageTitle { get; set; }
-
-        public string NavigationTitle { get; set; }
         public AuthUser CurrentUser
         {
             get

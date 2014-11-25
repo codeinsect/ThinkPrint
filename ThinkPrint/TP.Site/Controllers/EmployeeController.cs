@@ -14,6 +14,7 @@ namespace TP.Site.Controllers
 {
     public class EmployeeController : BaseController
     {
+      
         private readonly IEmployeeService _employeeService;
         public EmployeeController(IEmployeeService employeeService)
         {
@@ -28,9 +29,9 @@ namespace TP.Site.Controllers
             EmployeeListModel model = new EmployeeListModel();
             model.ViewList = employeeList;
             
-            model.PageIcon = PageIconMark;
-            model.PageTitle = PageTitle;
-            model.NavigationTitle = NavigationTitle;
+           
+            model.PageTitle = "员工信息";
+            model.PageSubTitle = "查看和维护所有的员工信息";
             return View(model);
         }
 
@@ -66,7 +67,9 @@ namespace TP.Site.Controllers
         [NonAction]
         private void PrepareModel(EmployeeModel model)
         {
-            model.NavigationTitle = NavigationTitle;
+
+            model.PageTitle = "创建信息";
+            model.PageSubTitle = "新增一个员工信息";
             model.IsEdit = model.Id == 0 ? false : true;
             if (!model.IsEdit)
             {

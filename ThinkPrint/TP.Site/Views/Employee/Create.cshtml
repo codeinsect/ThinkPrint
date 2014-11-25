@@ -1,8 +1,8 @@
 ﻿@model TP.Site.Models.Organization.EmployeeModel
 
 @{
-    ViewBag.Title = "创建信息";
-    ViewBag.SideBarName = Model.NavigationTitle;
+    ViewBag.Title = Model.PageTitle;
+    ViewBag.SubTitle = Model.PageSubTitle;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,7 +13,7 @@
             @Html.Partial("_Notifications")
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-plus fa-fw"></i>@ViewBag.Title</h3>
+                    <h3 class="panel-title">@ViewBag.Title</h3>
                 </div>
                 <div class="panel-body panel-body-reset">
                     @Html.Partial("_CreateOrEdit", Model)

@@ -8,6 +8,7 @@ using TP.EntityFramework.Models;
 using TP.Service.Authentication;
 using TP.Service.User;
 using TP.Site.Models.Account;
+using TP.Web.Framework.ActionFilters;
 using TP.Web.Framework.Security;
 
 namespace TP.Site.Controllers
@@ -24,8 +25,7 @@ namespace TP.Site.Controllers
             this._authenticationService = authenticationService;
             _webHelper = new WebHelper(this.HttpContext);
         }
-        // GET: Account
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }
@@ -66,9 +66,14 @@ namespace TP.Site.Controllers
             return View(model);
         }
 
-        public ActionResult Login()
+        [UserAuthorizeAttributeFilter]
+        public ActionResult LogOff()
         {
-            return View();
+            _authenticationService.SignOut();
+
+            return RedirectToAction("Login", "Account");
         }
+
+
     }
 }
